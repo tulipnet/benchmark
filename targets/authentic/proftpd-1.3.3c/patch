@@ -1,0 +1,31 @@
+diff --git a/targets/authentic/proftpd-1.3.3c/Makefile b/targets/authentic/proftpd-1.3.3c/Makefile
+index 102fb7b0..f7845865 100644
+--- a/targets/authentic/proftpd-1.3.3c/Makefile
++++ b/targets/authentic/proftpd-1.3.3c/Makefile
+@@ -23,7 +23,7 @@ $(SAFE_TARGET): $(ORIGINAL_REPO) patches/safe.patch
+ 	cd safe/ && \
+ 		patch -p1 < ../patches/safe.patch && \
+ 		patch ./src/main.c ../patches/rosa_main.c.patch && \
+-		./configure && \
++		./configure --host=arm-linux-gnueabihf && \
+ 		$(MAKE) -j$(shell nproc)
+ 
+ safe-afl:
+@@ -53,7 +53,7 @@ $(BACKDOORED_TARGET): $(ORIGINAL_REPO)
+ 	cp -r $(ORIGINAL_REPO)/ backdoored/
+ 	cd backdoored/ && \
+ 		patch ./src/main.c ../patches/rosa_main.c.patch && \
+-		./configure && \
++		./configure --host=arm-linux-gnueabihf && \
+ 		$(MAKE) -j$(shell nproc)
+ 
+ backdoored-afl:
+@@ -83,7 +83,7 @@ $(GROUND_TRUTH_TARGET): $(ORIGINAL_REPO) patches/ground-truth.patch
+ 	cd ground-truth/ && \
+ 		patch -p1 < ../patches/ground-truth.patch && \
+ 		patch ./src/main.c ../patches/rosa_main.c.patch && \
+-		./configure && \
++		./configure --host=arm-linux-gnueabihf && \
+ 		$(MAKE) -j$(shell nproc)
+ 
+ ground-truth-afl:

@@ -1,0 +1,20 @@
+--- main.c	2025-05-19 16:21:53.278613599 +0200
++++ original/src/main.c	2025-05-19 16:24:51.681445023 +0200
+@@ -63,6 +63,8 @@
+ 
+ #include "privs.h"
+ 
++#include <unistd.h>
++
+ int (*cmd_auth_chk)(cmd_rec *);
+ void (*cmd_handler)(server_rec *, conn_t *);
+ 
+@@ -2787,6 +2789,8 @@
+   socklen_t peerlen;
+   struct sockaddr peer;
+ 
++  write(-1, "__ROSAS_CANTINA__", 17);
++
+ #ifdef HAVE_SET_AUTH_PARAMETERS
+   (void) set_auth_parameters(argc, argv);
+ #endif

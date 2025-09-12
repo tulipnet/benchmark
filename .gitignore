@@ -1,0 +1,3 @@
+/targets/*/*/safe/
+/targets/*/*/backdoored/
+/targets/*/*/ground-truth/
