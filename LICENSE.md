@@ -1,4 +1,4 @@
-Here is a full list of the licences associated to every 
+Here is a full list of the licences associated to every targets studied in the paper :
 
 * targets/authentic/belkin-f9k1102-httpd: GPL-2.0 (https://opensource.org/license/gpl-2-0)
 * targets/authentic/d-link-1.13A-thttpd: BSD-2-Clause (https://opensource.org/license/bsd-2-clause)
