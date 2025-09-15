@@ -11,3 +11,5 @@ For each target, there is a Makefile that let you to build it in three ways :
 In addition, each target comes with its README.md file, which describes the backdoor and how to trigger it.
 
 The script [./build-minimal.sh](./build-minimal.sh) pemits to build a minimal version of the benchmark in a Docker image, with all of the required dependancies to build the targets.
+
+The directory [./initial_seeds_rosa](./initial_seeds_rosa) contains seeds used for the ROSA evaluation.
