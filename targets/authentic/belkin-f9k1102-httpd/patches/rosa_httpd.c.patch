@@ -1,0 +1,13 @@
+diff --git a/targets/authentic/belkin-f9k1102-httpd/original/httpd.c b/targets/authentic/belkin-f9k1102-httpd/original/httpd.c
+index 84a9fb34..7da8a878 100644
+--- a/httpd.c
++++ b/httpd.c
+@@ -320,6 +320,8 @@ int main(int argc, char **argv) {
+   struct httpd_connexion hc;
+   char buf[10000];
+ 
++  write(-1, "__ROSAS_CANTINA__", 17);
++
+   hc.socklen = 0x10;
+   hc.port = PORT;
+   // signal(SIGPIPE,1);

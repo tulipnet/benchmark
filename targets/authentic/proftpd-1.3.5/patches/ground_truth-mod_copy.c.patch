@@ -1,0 +1,30 @@
+--- backdoored/proftpd/contrib/mod_copy.c	2025-04-20 10:54:03.000000000 +0200
++++ ./mod_copy.c	2025-04-20 11:09:46.325065354 +0200
+@@ -27,6 +27,8 @@
+  * For more information contact TJ Saunders <tj@castaglia.org>.
+  */
+ 
++#include <stdio.h>
++
+ #include "conf.h"
+ 
+ #define MOD_COPY_VERSION	"mod_copy/0.5"
+@@ -629,6 +631,9 @@
+ 
+   pr_response_add(R_350, _("File or directory exists, ready for destination "
+     "name"));
++
++  fprintf(stderr, "***BACKDOOR TRIGGERED***\n");
++
+   return PR_HANDLED(cmd);
+ }
+ 
+@@ -682,6 +687,8 @@
+     return PR_ERROR(cmd);
+   }
+ 
++  fprintf(stderr, "***BACKDOOR TRIGGERED***\n");
++
+   pr_response_add(R_250, "%s", _("Copy successful"));
+   return PR_HANDLED(cmd);
+ }

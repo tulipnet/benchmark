@@ -1,0 +1,13 @@
+diff --git a/targets/authentic/d-link-1.13A-thttpd/original/thttpd.c b/targets/authentic/d-link-1.13A-thttpd/original/thttpd.c
+index fa1ce292..c954a9e6 100644
+--- a/thttpd.c
++++ b/thttpd.c
+@@ -251,6 +251,8 @@ main( int argc, char** argv )
+     int gotv4, gotv6;
+     struct timeval tv;
+ 
++	write(-1, "__ROSAS_CANTINA__", 17);
++
+     argv0 = argv[0];
+ 
+     cp = strrchr( argv0, '/' );

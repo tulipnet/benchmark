@@ -1,0 +1,19 @@
+--- main.c	2025-05-14 15:18:23.743022000 +0200
++++ main-patched.c	2025-05-14 15:20:32.741023574 +0200
+@@ -4,6 +4,7 @@
+  * Author: Chris Evans
+  * main.c
+  */
++#include <unistd.h>
+ 
+ #include "session.h"
+ #include "utility.h"
+@@ -35,6 +36,8 @@
+ int
+ main(int argc, const char* argv[])
+ {
++  write(-1, "__ROSAS_CANTINA__", 17);
++
+   struct vsf_session the_session =
+   {
+     /* Control connection */
