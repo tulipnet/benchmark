@@ -1,5 +1,7 @@
 # Tulip Benchmark
 
+Authors: Alexandre Doyen, Michaël Marcozzi, Sébastien Bardin and Jean-Yves Marion
+
 This repository contains the benchmark used in the paper's evaluation.
 
 Under the directory [target](./targets), you will find the source code associated to each case of study of the paper.
